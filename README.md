@@ -1,3 +1,3 @@
 online-judge
 ============
-Here is my solution code to some online judge problem. 
+My solution to some online judge problem, mainly [sicily](soj.me) of Sun Yat-sen University. 
