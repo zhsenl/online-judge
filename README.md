@@ -1,3 +1,3 @@
 online-judge
 ============
-My solution to some online judge problem, mainly [sicily](soj.me) of Sun Yat-sen University. 
+My solution to some online judge problem, mainly [sicily](http://wwww.soj.me) of Sun Yat-sen University. 
