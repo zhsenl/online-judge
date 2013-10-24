@@ -56,6 +56,6 @@
 //		}
 //		cout << mod(x, b[n - 1]) << ')' <<endl;
 //	}
-//	//system("pause");
+//	system("pause");
 //	return 0;
 //}

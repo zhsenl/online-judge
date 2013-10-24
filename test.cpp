@@ -1,22 +1,28 @@
-//// next_permutation example
-//#include <iostream>     // std::cout
-//#include <algorithm>    // std::next_permutation, std::sort
+//#include <iostream>
+//#include <bitset>
+//#include <vector>
+//#include "string.h"
+//using namespace std;
 //
-//int main () {
-//	int myints[] = {1,2,3};
-//
-//	std::sort (myints,myints+3);
-//
-//	std::cout << "The 3! possible permutations with 3 elements:\n";
-//	/*do {
-//		std::cout << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-//	} while ( std::next_permutation(myints,myints+3) );
-//*/
-//	std::cout << "before: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-//	std::next_permutation(myints,myints+3);
-//	std::cout << "after: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-//	std::next_permutation(myints,myints+3);
-//	std::cout << "after2: " << myints[0] << ' ' << myints[1] << ' ' << myints[2] << '\n';
-//	system("pause");
-//	return 0;
+//int main(){
+//	int t, n;
+//	cin >> t;
+//	while(t--){
+//		cin >> n;	
+//		int n_2 = n * n;
+//		vector<bitset<36>> bits;
+//		for(int i = 0; i < n_2; i++){
+//			for(int j = 0; j < n_2; j++){
+//				int temp = 0;
+//				cin >> temp;
+//				bits[i][temp] = 1;
+//			}
+//		}
+//		bitset<36> and_bits(0xFFFFFFFFF);
+//		cout << and_bits<< endl;
+//		for(int i = 0; i < n_2; i++){
+//			and_bits &= bits[i];
+//			if()
+//		}
+//	}
 //}
