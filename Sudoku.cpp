@@ -1,47 +1,67 @@
 //#include <iostream>
-//#include <bitset>
+//#include <fstream>
+//#include <cstdio>
 //#include <vector>
-//#include <string>
-//#include "string.h"
+//#include <algorithm>
+//#include <cstring>
 //using namespace std;
 //
-//int main(){
-//	int t, n;
-//	cin >> t;
-//	for(int c = 1; c <=t; c++){
-//		cin >> n;	
-//		int n_2 = n * n;
-//		bitset<36> bits[36];
-//		for(int i = 0; i < n_2; i++){
-//			for(int j = 0; j < n_2; j++){
-//				int temp = 0;
-//				cin >> temp;
-//				temp --;
-//				if(temp > 35 || temp < 0){
-//					cout << "Case #" << c << ": No" << endl;
-//					goto escape;
-//				}
-//				bits[i][temp] = 1;
-//			}
-//		}
-//		bitset<36> and_bits (0xFFFFFFFFFul);
-//		//cout << and_bits<< endl;
-//		for(int i = 0; i < n_2; i++){
-//			//cout << bits[i] << " " << and_bits << endl;
-//			and_bits &= bits[i];
-//			//cout << and_bits << endl;
-//		}
-//		string temp = "";
-//		for(int j = 0; j < n_2; j++){
-//			for(int i = 0; i < n_2; i++){
-//				temp = temp + bits[i][j];
-//			}
-//			bitset<36> col_bits(temp);
-//			cout << col_bits << endl;
-//		}
+//const int N = 6 * 6 + 1;
+//int map[N][N];
 //
-//escape:
-//		continue;
+//bool check(vector<int> v){
+//	sort(v.begin(), v.end());
+//	for(unsigned int i = 0; i < v.size(); i++){
+//		if(v[i] != i + 1){
+//			return false;
+//		}
 //	}
-//	system("pause");
+//	return true;
+//}
+//
+//int main(){
+//	freopen("A-large-practice.in","r", stdin);
+//	freopen("A-large-practice.out","w", stdout);
+//	int t;
+//	scanf("%d", &t);
+//	while(t--){
+//		int n;
+//		scanf("%d", &n);
+//		int m = n * n;
+//		for(int i = 0; i < m; i++){
+//			for(int j = 0; j < m; j++){
+//				scanf("%d", &map[i][j]);
+//			}
+//		}
+//		bool flag = true;
+//		for(int i = 0; i < m; i++){
+//			vector<int> row;
+//			for(int j = 0; j < m; j++){
+//				row.push_back(map[i][j]);
+//			}
+//			flag &= check(row);
+//		}
+//		for(int j = 0; j < m; j++){
+//			vector<int> col;
+//			for(int i = 0; i < m; i++){
+//				col.push_back(map[i][j]);
+//			}
+//			flag &= check(col);
+//		}
+//		for(int i = 0; i < n; i++){
+//			for(int j = 0; j < n; j++){
+//				vector<int> grid;
+//				for(int x = 0; x < n; x++){
+//					for(int y = 0; y < n; y++){
+//						grid.push_back(map[i*n + x][j*n + y]);
+//					}
+//					
+//				}
+//				flag &= check(grid);
+//			}
+//		}
+//		static int id = 1;
+//		printf("Case #%d: %s\n", id++, flag ? "Yes" : "No");
+//	}
+//	
 //}

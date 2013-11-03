@@ -1,7 +1,7 @@
-//#include <iostream>
-//#include <string>
-//#include <cmath>
-//using namespace std;
+#include <iostream>
+#include <string>
+#include <cmath>
+using namespace std;
 ////取模
 ////为什么从前往后算可以
 ////从后往前算不可以
@@ -58,4 +58,39 @@
 //	}
 //	system("pause");
 //	return 0;
+//}
+
+////TA的方法
+//int GetRemainder(string input, int m){
+//	int res = 0;
+//	for(unsigned int i = 0; i < input.size(); i++){
+//		res = (res * 10 + (input[i] - '0')) % m;
+//	}
+//	return res;
+//}
+//
+//
+//int main(){
+//	int t;
+//	cin >> t;
+//	while(t--){
+//		int n;
+//		int a[101];
+//		cin >> n;
+//		for(int i = 0; i < n; i++){
+//			cin >> a[i];
+//		}
+//		string input;
+//		cin >> input;
+//		cout << "(";
+//		for(int i = 0; i < n; i++){
+//			cout << GetRemainder(input, a[i]);
+//			if(i == n - 1){
+//				cout << ")" << endl;
+//			}else{
+//				cout << ",";
+//			}
+//		}
+//	}
+//	//system("pause");
 //}
