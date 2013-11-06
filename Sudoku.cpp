@@ -23,7 +23,8 @@
 //	freopen("A-large-practice.in","r", stdin);
 //	freopen("A-large-practice.out","w", stdout);
 //	int t;
-//	scanf("%d", &t);
+//	//scanf("%d", &t);
+//	cin >> t;
 //	while(t--){
 //		int n;
 //		scanf("%d", &n);
