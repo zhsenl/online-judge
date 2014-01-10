@@ -1,36 +1,35 @@
 //#include <iostream>
-//#include <algorithm>
-//#include "string.h"
+//#include <cstring>
 //using namespace std;
 //
-//int num[1001];
-//int buf[1001][1001];
+//#define MAX 1000
 //
-//int dp(int a, int b){
-//	if (buf[a][b]){
-//		return buf[a][b];
-//	}
-//	if(a + 1 == b){
-//		return buf[a][b] = max(num[a], num[b]);
-//	}
-//	int l = num[a] + (num[a+1]>=num[b]? dp(a+2, b) : dp(a + 1, b -1));
-//	int r = num[b] + (num[a] >= num[b-1]? dp(a+1,b-1) : dp(a,b-2));
-//	return buf[a][b] =  max(l,r);
+//int num[MAX];
+//int buf[MAX][MAX];
+//
+//inline int max(int a, int b) { return a > b ? a : b; }
+//
+//int dp(int a, int b) {
+//	if (a == b-1) return buf[a][b] = max(num[a], num[b]);
+//	if (buf[a][b]) return buf[a][b];
+//	int t1, t2;
+//	t1 = num[a];
+//	t1 += (num[a + 1] >= num[b]) ? dp(a + 2, b) : dp(a + 1, b - 1);
+//	t2 = num[b];
+//	t2 += (num[a] >= num[b - 1]) ? dp(a + 1, b - 1) : dp(a, b - 2);
+//	return buf[a][b] = max(t1, t2);
 //}
 //
-//int main(){
-//	int n;
-//
-//	int game_count = 0;
-//	while(cin >> n && n != 0){
-//		int sum = 0;
-//		game_count ++;
-//		for(int i = 0; i < n; i++){
+//int main(void) {
+//	int n, s, cnt = 1;
+//	while (cin >> n && n) {
+//		s = 0;
+//		for (int i = 0; i < n; ++i) {
 //			cin >> num[i];
-//			sum += num[i];
+//			s += num[i];
 //		}
 //		memset(buf, 0, sizeof(buf));
-//		int p = dp(0, n - 1) * 2 - sum;
-//		cout << "In game "<< game_count << ", the greedy strategy might lose by as many as " << p << " points." <<endl;
+//		cout << "In game " << cnt++ << ", the greedy strategy might lose by as many as " << 2 * dp(0, n - 1) - s << " points." << endl;
 //	}
+//	return 0;
 //}
