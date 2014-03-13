@@ -22,5 +22,5 @@
 //		}
 //		cout << endl;
 //	}
-//	//system("pause");
+//	system("pause");
 //}

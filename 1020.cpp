@@ -1,7 +1,7 @@
-#include <iostream>
-#include <string>
-#include <cmath>
-using namespace std;
+//#include <iostream>
+//#include <string>
+//#include <cmath>
+//using namespace std;
 ////取模
 ////为什么从前往后算可以
 ////从后往前算不可以
@@ -59,7 +59,7 @@ using namespace std;
 //	system("pause");
 //	return 0;
 //}
-
+//
 ////TA的方法
 //int GetRemainder(string input, int m){
 //	int res = 0;
